@@ -8,8 +8,12 @@
       function addItem()
       {
 		  var bookmark = document.getElementById('bookmark');
+
 		  var row = document.createElement('li');
-      row.innerHTML = document.getElementById('linkname').value;
+      var anchor = document.createElement('a');
+      anchor.href = document.getElementById('href').value;
+      row.appendChild(anchor);
+      anchor.innerHTML = document.getElementById('linkname').value;
 
       bookmark.appendChild(row);
 		  // 課題：
